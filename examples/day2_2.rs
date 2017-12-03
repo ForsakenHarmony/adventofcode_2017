@@ -23,10 +23,11 @@ fn evenly_divisible(row: Vec<f32>) -> f32 {
     for (j, m) in row.iter().enumerate() {
       if i == j { continue };
       if n < m { continue };
-      if (n / m) % 1f32 == 0f32 {
-        return n / m
+      
+      if (n / m) % 1.0 == 0.0 {
+        return n / m;
       }
     }
   }
-  0f32
+  0.0
 }
