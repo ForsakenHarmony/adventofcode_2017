@@ -2,6 +2,7 @@
 extern crate test;
 
 extern crate adventofcode_2017;
+
 use adventofcode_2017::day1::INPUT;
 
 fn main() {
@@ -9,7 +10,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> u64{
+pub fn day(input: &'static str) -> u64 {
   let arr = input.as_bytes().iter().map(|char| {
     return (char - 48) as u64;
   }).collect::<Vec<_>>();
@@ -31,6 +32,9 @@ mod tests {
   
   #[bench]
   fn day1(b: &mut Bencher) {
-    b.iter(|| day(INPUT));
+    b.iter(|| {
+      let input = test::black_box(INPUT);
+      day(input)
+    });
   }
 }

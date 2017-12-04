@@ -2,6 +2,7 @@
 extern crate test;
 
 extern crate adventofcode_2017;
+
 use adventofcode_2017::day1::INPUT;
 
 fn main() {
@@ -30,6 +31,9 @@ mod tests {
   
   #[bench]
   fn day1_2(b: &mut Bencher) {
-    b.iter(|| day(INPUT));
+    b.iter(|| {
+      let input = test::black_box(INPUT);
+      day(input)
+    });
   }
 }
