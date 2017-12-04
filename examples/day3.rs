@@ -20,7 +20,7 @@ fn find_ring_and_max(n: i32) -> (i32, i32) {
   loop {
     let max = max_for_ring(ring);
     if max >= n {
-      return (ring, max)
+      return (ring, max);
     }
     ring += 1;
   }

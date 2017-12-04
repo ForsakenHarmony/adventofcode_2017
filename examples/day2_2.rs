@@ -13,7 +13,6 @@ fn main() {
         .collect::<Vec<f32>>();
     })
     .map(|row| evenly_divisible(row))
-//    .collect::<Vec<_>>();
     .sum();
   println!("{:?}", arr)
 }

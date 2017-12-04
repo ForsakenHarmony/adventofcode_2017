@@ -13,7 +13,6 @@ fn main() {
         .collect::<Vec<u32>>();
     })
     .map(|row| calc_checksum(row))
-//    .collect::<Vec<_>>();
     .sum();
   println!("{:?}", arr)
 }
