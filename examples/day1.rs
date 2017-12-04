@@ -1,8 +1,16 @@
+#![feature(test)]
+extern crate test;
+
 extern crate adventofcode_2017;
 use adventofcode_2017::day1::INPUT;
 
 fn main() {
-  let arr = INPUT.as_bytes().iter().map(|char| {
+  let res = day(INPUT);
+  println!("{:?}", res);
+}
+
+pub fn day(input: &'static str) -> u64{
+  let arr = input.as_bytes().iter().map(|char| {
     return (char - 48) as u64;
   }).collect::<Vec<_>>();
   let mut last = arr.last().unwrap();
@@ -13,5 +21,16 @@ fn main() {
     }
     last = n;
   };
-  println!("{:?}", sum);
+  sum
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  use test::Bencher;
+  
+  #[bench]
+  fn day1(b: &mut Bencher) {
+    b.iter(|| day(INPUT));
+  }
 }

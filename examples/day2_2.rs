@@ -1,9 +1,17 @@
+#![feature(test)]
+extern crate test;
+
 extern crate adventofcode_2017;
 
 use adventofcode_2017::day2::INPUT;
 
 fn main() {
-  let arr: f32 = INPUT
+  let res = day(INPUT);
+  println!("{:?}", res);
+}
+
+pub fn day(input: &'static str) -> f32 {
+  input
     .split('\n')
     .map(|s| {
       return s
@@ -13,8 +21,7 @@ fn main() {
         .collect::<Vec<f32>>();
     })
     .map(|row| evenly_divisible(row))
-    .sum();
-  println!("{:?}", arr)
+    .sum()
 }
 
 fn evenly_divisible(row: Vec<f32>) -> f32 {
@@ -29,4 +36,15 @@ fn evenly_divisible(row: Vec<f32>) -> f32 {
     }
   }
   0.0
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  use test::Bencher;
+  
+  #[bench]
+  fn day2_2(b: &mut Bencher) {
+    b.iter(|| day(INPUT));
+  }
 }

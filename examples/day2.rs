@@ -1,9 +1,16 @@
-extern crate adventofcode_2017;
+#![feature(test)]
+extern crate test;
 
+extern crate adventofcode_2017;
 use adventofcode_2017::day2::INPUT;
 
 fn main() {
-  let arr: u32 = INPUT
+  let res = day(INPUT);
+  println!("{:?}", res);
+}
+
+pub fn day(input: &'static str) -> u32 {
+  input
     .split('\n')
     .map(|s| {
       return s
@@ -13,8 +20,7 @@ fn main() {
         .collect::<Vec<u32>>();
     })
     .map(|row| calc_checksum(row))
-    .sum();
-  println!("{:?}", arr)
+    .sum()
 }
 
 fn calc_checksum(row: Vec<u32>) -> u32 {
@@ -29,4 +35,15 @@ fn calc_checksum(row: Vec<u32>) -> u32 {
   });
   
   res.1 - res.0
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  use test::Bencher;
+  
+  #[bench]
+  fn day2(b: &mut Bencher) {
+    b.iter(|| day(INPUT));
+  }
 }
