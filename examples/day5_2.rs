@@ -22,11 +22,7 @@ pub fn day(input: &'static str) -> u32 {
   
   while index < instructions.len() {
     let mov = instructions[index];
-    if mov >= 3 {
-      instructions[index] = mov - 1;
-    } else {
-      instructions[index] = mov + 1;
-    }
+    instructions[index] = mov + if mov >= 3 { -1 } else { 1 };
     index = (index as i32 + mov) as usize;
     
     counter += 1;
