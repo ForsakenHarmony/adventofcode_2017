@@ -38,24 +38,24 @@ pub fn day(input: &'static str) -> u64 {
   counter - index
 }
 
-fn balance(mut slice: Vec<u32>) -> Vec<u32> {
+fn balance(mut vec: Vec<u32>) -> Vec<u32> {
   let mut biggest = 0;
   let mut biggest_i = 0;
-  for (i, &n) in slice.iter().enumerate() {
+  for (i, &n) in vec.iter().enumerate() {
     if n > biggest {
       biggest = n;
       biggest_i = i;
     }
   }
-  slice[biggest_i] = 0;
+  vec[biggest_i] = 0;
   
-  let len = slice.len();
+  let len = vec.len();
   
   for i in 0..biggest as usize {
-    slice[(biggest_i + i + 1) % len] += 1;
+    vec[(biggest_i + i + 1) % len] += 1;
   }
   
-  slice
+  vec
 }
 
 #[cfg(test)]
@@ -64,7 +64,7 @@ mod tests {
   use test::Bencher;
   
   #[bench]
-  fn day1(b: &mut Bencher) {
+  fn day6_2(b: &mut Bencher) {
     b.iter(|| {
       let input = test::black_box(INPUT);
       day(input)
