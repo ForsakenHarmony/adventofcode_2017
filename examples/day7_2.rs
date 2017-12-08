@@ -62,8 +62,6 @@ fn check_children(map: &HashMap<&str, Node>, name: &str) -> Result<(usize, usize
 
       // check different
       if !(c_nums[0].0 * c_nums.len() == sum) {
-        println!("{}, {:?}, {:?}", name, node, c_nums);
-
         let mut flag = 0;
 
         let mut wrong = (0, 0);

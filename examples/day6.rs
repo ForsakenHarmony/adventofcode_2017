@@ -24,12 +24,10 @@ pub fn day(input: &'static str) -> u64 {
   set.insert(vec.clone());
   
   let mut counter: u64 = 0;
-  
-  println!("c: {} now: {:?}", counter, vec);
+
   loop {
     vec = balance(vec);
     counter += 1;
-    println!("c: {} now: {:?}", counter, vec);
     if !set.insert(vec.clone()) {
       break
     }

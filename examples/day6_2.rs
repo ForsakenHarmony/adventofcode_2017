@@ -24,12 +24,10 @@ pub fn day(input: &'static str) -> u64 {
   let mut counter: u64 = 0;
   
   map.insert(vec.clone(), counter);
-  
-  println!("c: {} now: {:?}", counter, vec);
+
   let index = loop {
     vec = balance(vec);
     counter += 1;
-    println!("c: {} now: {:?}", counter, vec);
     if let Some(v) = map.insert(vec.clone(), counter) {
       break v
     }

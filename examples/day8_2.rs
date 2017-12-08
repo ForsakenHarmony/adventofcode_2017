@@ -53,7 +53,6 @@ pub fn day(input: &'static str) -> isize {
     }
   }
 
-//  map.iter().fold(0, |acc, (_, &v)| if v > acc {v} else {acc})
   highest
 }
 
@@ -63,7 +62,7 @@ mod tests {
   use test::Bencher;
 
   #[bench]
-  fn day8(b: &mut Bencher) {
+  fn day8_2(b: &mut Bencher) {
     b.iter(|| {
       let input = test::black_box(INPUT);
       day(input)
