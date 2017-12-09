@@ -18,7 +18,7 @@ struct Node<'a> {
   childen: Option<Vec<&'a str>>
 }
 
-pub fn day(input: &'static str) -> usize {
+pub fn day(input: &str) -> usize {
   let start = "dgoocsw";
   let mut map = HashMap::new();
 

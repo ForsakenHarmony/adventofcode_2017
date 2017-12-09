@@ -12,7 +12,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> &str {
+pub fn day(input: &str) -> &str {
   let mut current  = "";
   let mut map = HashMap::new();
 

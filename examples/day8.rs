@@ -12,7 +12,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> isize {
+pub fn day(input: &str) -> isize {
   let mut map: HashMap<&str, isize> = HashMap::new();
 
   for line in input.lines() {

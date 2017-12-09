@@ -10,7 +10,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> u32 {
+pub fn day(input: &str) -> u32 {
   let mut instructions = input
     .split_whitespace()
     .filter(|s| !s.is_empty())

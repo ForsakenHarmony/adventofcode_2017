@@ -29,3 +29,7 @@ pub mod day7 {
 pub mod day8 {
   pub const INPUT: &'static str = include_str!("day8.txt");
 }
+
+pub mod day9 {
+  pub const INPUT: &'static str = include_str!("day9.txt");
+}

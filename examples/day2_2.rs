@@ -10,7 +10,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> f32 {
+pub fn day(input: &str) -> f32 {
   input
     .split('\n')
     .map(|s| {

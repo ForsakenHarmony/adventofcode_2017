@@ -12,7 +12,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> u64 {
+pub fn day(input: &str) -> u64 {
   let mut vec = input
     .split_whitespace()
     .filter(|s| !s.is_empty())

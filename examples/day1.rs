@@ -10,7 +10,7 @@ fn main() {
   println!("{:?}", res);
 }
 
-pub fn day(input: &'static str) -> u64 {
+pub fn day(input: &str) -> u64 {
   let arr = input.as_bytes().iter().map(|char| {
     return (char - 48) as u64;
   }).collect::<Vec<_>>();
