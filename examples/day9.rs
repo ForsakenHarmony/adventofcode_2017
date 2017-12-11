@@ -11,36 +11,34 @@ fn main() {
 }
 
 pub fn day(input: &str) -> usize {
-  let mut split = input.split("");
+  let mut chars = input.chars();
 
   let mut is_garbage = false;
   let mut counter = 0;
   let mut depth = 0;
 
-  while let Some(s) = split.next() {
-    let s: &str = s;
-    if s.is_empty() { continue };
+  while let Some(c) = chars.next() {
     if is_garbage {
-      match s.as_ref() {
-        "!" => {
-          split.next();
+      match c {
+        '!' => {
+          chars.next();
         }
-        ">" => {
+        '>' => {
           is_garbage = false;
         }
         _ => {}
       }
       continue;
     }
-    match s.as_ref() {
-      "{" => {
+    match c {
+      '{' => {
         depth += 1;
         counter += depth;
       }
-      "}" => {
+      '}' => {
         depth -= 1;
       }
-      "<" => {
+      '<' => {
         is_garbage = true;
       }
       _ => {}

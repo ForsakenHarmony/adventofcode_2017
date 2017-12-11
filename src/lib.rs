@@ -33,3 +33,11 @@ pub mod day8 {
 pub mod day9 {
   pub const INPUT: &'static str = include_str!("day9.txt");
 }
+
+pub mod day10 {
+  pub const INPUT: &'static str = "70,66,255,2,48,0,54,48,80,141,244,254,160,108,1,41";
+}
+
+pub mod day11 {
+  pub const INPUT: &'static str = include_str!("day11.txt");
+}
