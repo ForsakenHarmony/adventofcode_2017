@@ -36,7 +36,7 @@ pub fn knot_hash(input: &str) -> String {
 }
 
 fn main() {
-  let res = day("amgozmfv");
+  let res = day(INPUT);
   println!("{:?}", res);
 }
 
@@ -47,10 +47,10 @@ pub fn day(input: &str) -> usize {
     let hash = knot_hash(format!("{}-{}", input, y).as_ref());
     for (x, v) in hash.chars().map(|c| c.to_digit(16).unwrap() as u8).enumerate() {
       let x = x as isize * 4;
-      if v.bitand(1) > 0 { map.insert((x + 0, y), false); };
-      if v.bitand(2) > 0 { map.insert((x + 1, y), false); };
-      if v.bitand(4) > 0 { map.insert((x + 2, y), false); };
-      if v.bitand(8) > 0 { map.insert((x + 3, y), false); };
+      if v.bitand(1) > 0 { map.insert((x + 3, y), false); };
+      if v.bitand(2) > 0 { map.insert((x + 2, y), false); };
+      if v.bitand(4) > 0 { map.insert((x + 1, y), false); };
+      if v.bitand(8) > 0 { map.insert((x + 0, y), false); };
     }
   }
 
