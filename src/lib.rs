@@ -45,3 +45,16 @@ pub mod day11 {
 pub mod day12 {
   pub const INPUT: &'static str = include_str!("day12.txt");
 }
+
+pub mod day13 {
+  pub const INPUT: &'static str = include_str!("day13.txt");
+}
+
+pub mod day14 {
+  pub const INPUT: &'static str = "stpzcrnm";
+}
+
+pub mod day15 {
+  pub const INPUT_A: usize = 618;
+  pub const INPUT_B: usize = 814;
+}

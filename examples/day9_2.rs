@@ -48,7 +48,7 @@ mod tests {
   use test::Bencher;
 
   #[bench]
-  fn day9(b: &mut Bencher) {
+  fn day9_2(b: &mut Bencher) {
     b.iter(|| {
       let input = test::black_box(INPUT);
       day(input)
