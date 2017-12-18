@@ -58,3 +58,15 @@ pub mod day15 {
   pub const INPUT_A: usize = 618;
   pub const INPUT_B: usize = 814;
 }
+
+pub mod day16 {
+  pub const INPUT: &'static str = include_str!("day16.txt");
+}
+
+pub mod day17 {
+  pub const INPUT: usize = 359;
+}
+
+pub mod day18 {
+  pub const INPUT: &'static str = include_str!("day18.txt");
+}
