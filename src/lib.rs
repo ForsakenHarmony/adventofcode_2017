@@ -74,3 +74,20 @@ pub mod day18 {
 pub mod day19 {
   pub const INPUT: &'static str = include_str!("day19.txt");
 }
+
+pub mod day20 {
+  pub const INPUT: &'static str = include_str!("day20.txt");
+}
+
+pub mod day21 {
+  pub const INPUT: &'static str = include_str!("day21.txt");
+}
+
+pub mod day22 {
+  pub const INPUT: &'static str = include_str!("day22.txt");
+}
+
+pub mod day23 {
+  pub const INPUT: &'static str = include_str!("day23.txt");
+}
+

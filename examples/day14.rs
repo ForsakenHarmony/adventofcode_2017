@@ -42,7 +42,6 @@ fn main() {
 pub fn day(input: &str) -> usize {
   (0usize..128usize).map(|i| {
     let hash = knot_hash(format!("{}-{}", input, i).as_ref());
-    println!("{:?}", hash);
     hash
       .chars()
       .map(|c| c.to_digit(16).unwrap() as u8)

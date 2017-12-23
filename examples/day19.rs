@@ -87,10 +87,8 @@ impl Runner {
 
   fn run(&mut self) -> String {
     self.pos.0 = self.grid[0].iter().position(|&c| c == '|').unwrap() as isize;
-    println!("{:?}", self.pos);
 
     loop {
-      println!("{:?} {:?} {:?}", self.pos, self.dir, self.get(&self.pos));
       if self.dir == (0,0) {
         break;
       }
