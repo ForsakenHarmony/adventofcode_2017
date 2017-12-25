@@ -5,3 +5,4 @@ authors = ["harmony <me@hrmny.pw>"]
 
 [dependencies]
 rayon = "0.9"
+regex = "0.2"
